@@ -4,6 +4,7 @@ import Statistics from './Statistics/Statistics';
 import Section from './Section/Section';
 import FeedbackOpt from './FeedbackOptions/FeedbackOptions';
 import Notification from './Notification/Notification';
+import Box from './Box/Box';
 
 export class App extends Component {
   state = {
@@ -49,7 +50,7 @@ export class App extends Component {
       onLeaveFeedback,
     } = this;
     return (
-      <div>
+      <Box bg="beige" color="green">
         <Section title="Statistics">
           <FeedbackOpt
             options={Object.keys(this.state)}
@@ -69,7 +70,7 @@ export class App extends Component {
             <Notification message="There is no feedback" />
           )}
         </Section>
-      </div>
+      </Box>
     );
   }
 }

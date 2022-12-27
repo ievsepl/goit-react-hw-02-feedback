@@ -1,11 +1,22 @@
 import PropTypes from 'prop-types';
+// import { Sect } from './Section.styled';
+import Box from '../Box/Box';
 
 const Section = ({ title, children }) => {
   return (
-    <section>
-      <h2>{title}</h2>
+    <Box
+      display="flex"
+      justifyContent="space-around"
+      flexDirection="column"
+      width="50%"
+      alignItems="center"
+      as="section"
+    >
+      <Box color="red" as="h2">
+        {title}
+      </Box>
       {children}
-    </section>
+    </Box>
   );
 };
 export default Section;

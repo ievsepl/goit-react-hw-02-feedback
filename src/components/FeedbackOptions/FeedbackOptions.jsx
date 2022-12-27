@@ -1,16 +1,26 @@
 import PropTypes from 'prop-types';
+import Box from '../Box/Box';
 
 const FeedbackOpt = ({ onChoiceFeedback, options }) => {
   return (
-    <div>
+    <Box
+      display="flex"
+      // justifyContent="space-around"
+      // width="50%"
+      // alignItems="center"
+      // gridRowGap="10 px"
+    >
       {options.map(option => {
         return (
-          <button key={option} type="button" onClick={onChoiceFeedback}>
-            {option.slice(0, 1).toUpperCase() + option.slice(1, option.length)}
-          </button>
+          <Box ml="10px">
+            <button key={option} type="button" onClick={onChoiceFeedback}>
+              {option.slice(0, 1).toUpperCase() +
+                option.slice(1, option.length)}
+            </button>
+          </Box>
         );
       })}
-    </div>
+    </Box>
   );
 };
 export default FeedbackOpt;
