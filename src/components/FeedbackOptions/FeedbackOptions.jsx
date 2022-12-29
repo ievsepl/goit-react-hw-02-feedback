@@ -12,8 +12,8 @@ const FeedbackOpt = ({ onChoiceFeedback, options }) => {
     >
       {options.map(option => {
         return (
-          <Box ml="10px">
-            <button key={option} type="button" onClick={onChoiceFeedback}>
+          <Box ml="10px" key={option}>
+            <button type="button" onClick={onChoiceFeedback}>
               {option.slice(0, 1).toUpperCase() +
                 option.slice(1, option.length)}
             </button>
@@ -28,8 +28,4 @@ export default FeedbackOpt;
 FeedbackOpt.propTypes = {
   onChoiceFeedback: PropTypes.func.isRequired,
   options: PropTypes.arrayOf(PropTypes.string).isRequired,
-
-  // options: PropTypes.arrayOf({
-  //   option: PropTypes.string.isRequired,
-  // }).isRequired,
-}.isRequired;
+};
